@@ -1,46 +1,42 @@
 [
   {
     "titulo": "Termogênico Hell 3VS Nutrition · 120 Cápsulas",
-    "preco_normal": 55,90,
-    "preco_promocao": 50,00,
+    "preco_normal": 55.90,
+    "preco_promocao": 50.00,
     "link": "https://a.co/d/0ekq1Xg9",
     "imagem": "https://m.media-amazon.com/images/I/xxxx.jpg",
     "categoria": "Suplementos"
-  }
-
+  },
   {
     "titulo": "MAX TITANIUM CREATINA 300 GR MONOHIDRATADA",
-    "preco_normal": 48,90,
-    "preco_promocao": 35,00,
+    "preco_normal": 48.90,
+    "preco_promocao": 35.00,
     "link": "https://a.co/d/0j9sD9ov",
     "imagem": "https://m.media-amazon.com/images/I/xxxx.jpg",
     "categoria": "Suplemento"
-  }
-{
+  },
+  {
     "titulo": "Creatina em Cápsulas Hardcore - 100% Pura e Monohidratada - 120 Cápsulas",
-    "preco_normal": 30,15,
-    "preco_promocao": 20,00,
+    "preco_normal": 30.15,
+    "preco_promocao": 20.00,
     "link": "https://a.co/d/00vgnvx8",
     "imagem": "https://m.media-amazon.com/images/I/xxxx.jpg",
     "categoria": "Suplementos"
-  }
-
+  },
   {
     "titulo": "Creatina Monohidratada Sem Sabor - Pote 300g -",
-    "preco_normal": 59,00,
-    "preco_promocao": 49,90,
+    "preco_normal": 59.00,
+    "preco_promocao": 49.90,
     "link": "https://a.co/d/01v2OehI",
     "imagem": "https://m.media-amazon.com/images/I/xxxx.jpg",
     "categoria": "Suplemento"
-  }
-{
-    "titulo": "Ômega 3 EPA DHA 1g (120 Caps), ",
-    "preco_normal": 89,90,
-    "preco_promocao": 79,90,
+  },
+  {
+    "titulo": "Ômega 3 EPA DHA 1g (120 Caps)",
+    "preco_normal": 89.90,
+    "preco_promocao": 79.90,
     "link": "https://a.co/d/05RlpHZ4",
     "imagem": "https://m.media-amazon.com/images/I/xxxx.jpg",
     "categoria": "Suplementos"
   }
-
-  
 ]
