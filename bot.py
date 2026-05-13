@@ -1,56 +1,45 @@
 from telegram import Bot
 import asyncio
+import json
 import random
 
 TOKEN = "8780348557:AAFmjkBMxTYv8YnyUCkAyHQ8IbosVEPKPJo"
 CHAT_ID = "-1003922054940"
 
-produtos = [
-
-    {
-        "titulo": "🔥 Smartwatch Esportivo",
-        "preco": "R$ 129,90",
-        "link": "https://amzn.to/seulink1",
-        "imagem": "https://picsum.photos/500?1"
-    },
-
-    {
-        "titulo": "🎧 Headset Gamer RGB",
-        "preco": "R$ 149,90",
-        "link": "https://amzn.to/seulink2",
-        "imagem": "https://picsum.photos/500?2"
-    },
-
-    {
-        "titulo": "⌚ Relógio Inteligente",
-        "preco": "R$ 89,90",
-        "link": "https://amzn.to/seulink3",
-        "imagem": "https://picsum.photos/500?3"
-    }
-
-]
+bot = Bot(token=TOKEN)
 
 async def enviar_oferta():
 
-    bot = Bot(token=TOKEN)
+    with open("produtos.json", "r", encoding="utf-8") as file:
+        produtos = json.load(file)
 
     produto = random.choice(produtos)
 
+    desconto = round(
+        ((produto["preco_normal"] - produto["preco_promocao"]) /
+        produto["preco_normal"]) * 100
+    )
+
     mensagem = f"""
-{produto['titulo']}
+🔥 OFERTA ENCONTRADA
 
-💰 {produto['preco']}
+📦 {produto['titulo']}
 
-✅ Oferta por tempo limitado
+💰 De R$ {produto['preco_normal']}
+🔥 Por R$ {produto['preco_promocao']}
+
+🎯 Desconto de {desconto}%
+
+✅ Oferta em destaque
 ✅ Confira antes que acabe
 
-🛒 Comprar:
+🛒 Comprar agora:
 {produto['link']}
 """
 
     await bot.send_photo(
         chat_id=CHAT_ID,
-        photo=produto['imagem'],
+        photo=produto["imagem"],
         caption=mensagem
     )
 
