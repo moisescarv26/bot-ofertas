@@ -1,45 +1,70 @@
 from telegram import Bot
 import asyncio
-import json
+import feedparser
 import random
+import requests
+from bs4 import BeautifulSoup
 
 TOKEN = "8780348557:AAFmjkBMxTYv8YnyUCkAyHQ8IbosVEPKPJo"
 CHAT_ID = "-1003922054940"
 
-async def main():
+TAG_AFILIADA = "moisescarv07-20"
 
-    bot = Bot(token=TOKEN)
+bot = Bot(token=TOKEN)
 
-    with open("produtos.json", "r", encoding="utf-8") as file:
-        produtos = json.load(file)
+RSS_URL = "https://www.promobit.com.br/feed/"
 
-    produto = random.choice(produtos)
+descricoes = [
+    "🔥 Oferta encontrada automaticamente",
+    "⚡ Excelente oportunidade",
+    "💥 Preço muito abaixo do normal",
+    "🚀 Produto em destaque",
+    "🎯 Vale a pena conferir"
+]
 
-    desconto = round(
-        ((produto["preco_normal"] - produto["preco_promocao"]) /
-        produto["preco_normal"]) * 100
-    )
+urgencia = [
+    "⏳ Oferta pode acabar rápido",
+    "🚨 Promoção relâmpago",
+    "🔥 Aproveite antes que aumente",
+    "⚡ Últimas unidades"
+]
 
-    descricao = [
-        "🔥 Oferta por tempo limitado",
-        "⚡ Excelente custo-benefício",
-        "🚀 Produto muito procurado",
-        "💥 Vale a pena conferir",
-        "🎯 Ótima oportunidade"
-    ]
+async def enviar_oferta():
+
+    feed = feedparser.parse(RSS_URL)
+
+    ofertas_amazon = []
+
+    for item in feed.entries:
+
+        link = item.link.lower()
+
+        if "amazon" in link:
+            ofertas_amazon.append(item)
+
+    if not ofertas_amazon:
+        return
+
+    oferta = random.choice(ofertas_amazon)
+
+    titulo = oferta.title
+    link_original = oferta.link
+
+    # adiciona tag afiliada
+    if "?" in link_original:
+        link_afiliado = f"{link_original}&tag={TAG_AFILIADA}"
+    else:
+        link_afiliado = f"{link_original}?tag={TAG_AFILIADA}"
 
     mensagem = f"""
-{random.choice(descricao)}
+{random.choice(descricoes)}
 
-📦 {produto['titulo']}
+📦 {titulo}
 
-💰 De R$ {produto['preco_normal']}
-🔥 Por R$ {produto['preco_promocao']}
+{random.choice(urgencia)}
 
-🎯 {desconto}% OFF
-
-🛒 Comprar:
-{produto['link']}
+🛒 Comprar agora:
+{link_afiliado}
 """
 
     await bot.send_message(
@@ -47,4 +72,4 @@ async def main():
         text=mensagem
     )
 
-asyncio.run(main())
+asyncio.run(enviar_oferta())
