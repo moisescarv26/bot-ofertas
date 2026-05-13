@@ -3,7 +3,7 @@ import asyncio
 import json
 import random
 
-TOKEN = "SEU_TOKEN"
+TOKEN = "8780348557:AAFmjkBMxTYv8YnyUCkAyHQ8IbosVEPKPJo"
 CHAT_ID = "-1003922054940"
 
 async def main():
