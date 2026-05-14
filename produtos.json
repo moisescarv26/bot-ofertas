@@ -1,22 +1,42 @@
 [
   {
-    "id": 1,
-    "nome": "Creatina Integralmédica 300g",
-    "categoria": "Suplementos",
-    "preco_de": 129.90,
-    "preco_por": 97.40,
-    "url_base": "https://www.amazon.com.br/dp/B07L5S9C6G",
-    "imagem": "https://m.media-amazon.com/images/I/51uR7Z1+XHL._AC_SL1000_.jpg",
-    "enviado": false
+    "nome": "Amazon Echo Dot Max (Geração mais recente), smart speaker com Alexa, som envolvente e hub de casa inteligente integrado, ideal para sua sala de estar, Cor Grafite",
+    "categoria": "Dispositivos Amazon",
+    "preco_antigo": 796.81,
+    "preco_atual": 796.81,
+    "imagem": "https://m.media-amazon.com/images/G/32/kindle/devices/2025/NAV/Macaroonnav.jpg",
+    "link": "https://www.amazon.com.br/dp/B0DKLQT9XR/?tag=moisescarv07-20"
   },
   {
-    "id": 2,
-    "nome": "Apple iPhone 15 (128 GB) - Preto",
-    "categoria": "Tecnologia",
-    "preco_de": 7299.00,
-    "preco_por": 4699.00,
-    "url_base": "https://www.amazon.com.br/dp/B0CHX2F5QT",
-    "imagem": "https://m.media-amazon.com/images/I/416PG9Mf9sL._AC_SL1000_.jpg",
-    "enviado": false
+    "nome": "Termogênico Hell 3VS Nutrition - 120 Cápsulas - Cafeína + L-Carnitina + L-Tirosina + Picolinato de Cromo + TCM",
+    "categoria": "Saúde e Cuidados Pessoais",
+    "preco_antigo": 56.47,
+    "preco_atual": 56.47,
+    "imagem": "https://m.media-amazon.com/images/I/placeholder.jpg",
+    "link": "https://www.amazon.com.br/dp/B08B1VD78F/?tag=moisescarv07-20"
+  },
+  {
+    "nome": "MAX TITANIUM CREATINA 300 GR MONOHIDRATADA",
+    "categoria": "Saúde e Cuidados Pessoais",
+    "preco_antigo": 49.71,
+    "preco_atual": 49.71,
+    "imagem": "https://m.media-amazon.com/images/I/placeholder.jpg",
+    "link": "https://www.amazon.com.br/dp/B07DVJC66X/?tag=moisescarv07-20"
+  },
+  {
+    "nome": "Creatina Creapure® 300g Nutrends Elite Series",
+    "categoria": "Saúde e Cuidados Pessoais",
+    "preco_antigo": 132.9,
+    "preco_atual": 132.9,
+    "imagem": "https://m.media-amazon.com/images/I/placeholder.jpg",
+    "link": "https://www.amazon.com.br/dp/B0D9MPQ9CP/?tag=moisescarv07-20"
+  },
+  {
+    "nome": "Smart TV TCL 55 Polegadas QLED Mini LED 4K C6K WiFi Bluetooth Google TV 4 HDMI 144Hz HDR10+",
+    "categoria": "Eletrônicos",
+    "preco_antigo": 3249.0,
+    "preco_atual": 2924.1,
+    "imagem": "https://m.media-amazon.com/images/I/placeholder.jpg",
+    "link": "https://www.amazon.com.br/dp/B0F7JZMVKF/?tag=moisescarv07-20"
   }
 ]
