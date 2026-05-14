@@ -2,8 +2,9 @@ name: Telegram Bot Amazon
 
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: '*/20 * * * *'
 
 jobs:
   run-bot:
@@ -16,10 +17,11 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
 
       - name: Run bot
         run: python bot.py
