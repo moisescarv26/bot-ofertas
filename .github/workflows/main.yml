@@ -1,25 +1,81 @@
-name: Telegram Bot
+name: 🤖 Bot Ofertas Amazon — Telegram
 
 on:
-  workflow_dispatch:
+  # ─── Execução automática a cada 2 horas ───
   schedule:
-    - cron: '0 * * * *'
+    - cron: "0 */2 * * *"   # Toda hora par (UTC): 0h, 2h, 4h... = 21h, 23h, 1h... (BRT -3)
+
+  # ─── Execução manual pelo painel do GitHub ───
+  workflow_dispatch:
+    inputs:
+      motivo:
+        description: "Motivo do envio manual (opcional)"
+        required: false
+        default: "Teste manual"
+
+# ─── Evita execuções paralelas ───
+concurrency:
+  group: bot-ofertas
+  cancel-in-progress: false
 
 jobs:
-  run-bot:
+  publicar-oferta:
+    name: 📢 Publicar Oferta no Telegram
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-
-      - name: Setup Python
-        uses: actions/setup-python@v6
+      # 1. Checkout com token para poder fazer commit do histórico
+      - name: 📥 Checkout do repositório
+        uses: actions/checkout@v4
         with:
-          python-version: '3.11'
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 1
 
-      - name: Install dependencies
+      # 2. Python
+      - name: 🐍 Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # 3. Dependências
+      - name: 📦 Instalar dependências
         run: pip install -r requirements.txt
 
-      - name: Run Bot
-        run: python bot.py
+      # 4. Cria diretório de logs (caso não exista no repo)
+      - name: 📁 Preparar diretórios
+        run: |
+          mkdir -p logs data
+          touch logs/bot.log
+
+      # 5. Executa o bot
+      - name: 🚀 Executar bot de ofertas
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+        run: python src/bot.py
+
+      # 6. Commit do histórico atualizado (anti-repetição)
+      - name: 💾 Salvar histórico no repositório
+        if: success()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/sent_history.json logs/bot.log || true
+          git diff --cached --quiet || git commit -m "chore: atualiza histórico de ofertas [skip ci]"
+          git push
+
+      # 7. Resumo no log do Actions
+      - name: 📊 Resumo da execução
+        if: always()
+        run: |
+          echo "### 📢 Resultado do Bot de Ofertas" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Data/Hora (UTC):** $(date '+%d/%m/%Y %H:%M:%S')" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "#### 📋 Últimas linhas do log:" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          tail -20 logs/bot.log >> $GITHUB_STEP_SUMMARY 2>/dev/null || echo "(log vazio)"
+          echo '```' >> $GITHUB_STEP_SUMMARY
