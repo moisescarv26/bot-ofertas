@@ -32,8 +32,8 @@ logger = logging.getLogger(__name__)
 # CONSTANTES
 # ─────────────────────────────────────────────
 AFFILIATE_TAG = "moisescarv07-20"
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHANNEL = os.environ.get("TELEGRAM_CHANNEL_ID", "")
+TELEGRAM_TOKEN = os.environ.get("8780348557:AAFmjkBMxTYv8YnyUCkAyHQ8IbosVEPKPJo", "")
+TELEGRAM_CHANNEL = os.environ.get("-1003922054940", "")
 SENT_HISTORY_FILE = Path("data/sent_history.json")
 PRODUCTS_FILE = Path("data/produtos.json")
 
