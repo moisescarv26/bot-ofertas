@@ -6,18 +6,17 @@ import random
 TOKEN = "8780348557:AAFmjkBMxTYv8YnyUCkAyHQ8IbosVEPKPJo"
 CHAT_ID = "-1003922054940"
 
-bot = Bot(token=TOKEN)
-
 descricoes = {
+
     "Suplementos": [
         "💪 Excelente para performance",
-        "🔥 Muito procurado nos treinos",
+        "🔥 Muito usado nos treinos",
         "⚡ Ótimo custo-benefício",
-        "🏋️ Excelente opção fitness"
+        "🏋️ Produto muito procurado"
     ],
 
     "Tecnologia": [
-        "🚀 Produto muito procurado",
+        "🚀 Produto em alta",
         "🔥 Excelente oportunidade",
         "⚡ Tecnologia com ótimo preço",
         "🎯 Vale a pena conferir"
@@ -27,8 +26,16 @@ descricoes = {
 urgencia = [
     "⏳ Oferta pode acabar rápido",
     "🚨 Promoção relâmpago",
-    "⚡ Aproveite antes que aumente",
-    "🔥 Últimas unidades"
+    "🔥 Aproveite antes que aumente",
+    "⚡ Últimas unidades"
+]
+
+hashtags = [
+    "#Amazon",
+    "#Promoção",
+    "#Ofertas",
+    "#Achados",
+    "#Desconto"
 ]
 
 async def main():
@@ -57,11 +64,14 @@ async def main():
 
 🛒 Comprar agora:
 {produto["link"]}
+
+{' '.join(random.sample(hashtags, 3))}
 """
 
-    await bot.send_message(
+    await bot.send_photo(
         chat_id=CHAT_ID,
-        text=mensagem
+        photo=produto["imagem"],
+        caption=mensagem
     )
 
 asyncio.run(main())
