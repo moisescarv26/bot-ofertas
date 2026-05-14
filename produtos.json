@@ -1,182 +1,22 @@
 [
   {
-    "nome": "Whey Protein Concentrado 1kg - Chocolate - Integral Médica",
-    "categoria": "suplementos",
-    "preco_original": 89.90,
-    "preco_atual": 54.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZWHEY1",
-    "imagem": "https://m.media-amazon.com/images/I/71qY8X8KZIL._AC_SL1500_.jpg",
-    "ativo": true
+    "id": 1,
+    "nome": "Creatina Integralmédica 300g",
+    "categoria": "Suplementos",
+    "preco_de": 129.90,
+    "preco_por": 97.40,
+    "url_base": "https://www.amazon.com.br/dp/B07L5S9C6G",
+    "imagem": "https://m.media-amazon.com/images/I/51uR7Z1+XHL._AC_SL1000_.jpg",
+    "enviado": false
   },
   {
-    "nome": "Creatina Monohidratada 300g - Darkness - Black Skull",
-    "categoria": "suplementos",
-    "preco_original": 79.90,
-    "preco_atual": 44.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZCREAT",
-    "imagem": "https://m.media-amazon.com/images/I/61TrCXJbqkL._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "BCAA 2400 120 Cápsulas - Optimum Nutrition",
-    "categoria": "suplementos",
-    "preco_original": 119.90,
-    "preco_atual": 79.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZBCAA1",
-    "imagem": "https://m.media-amazon.com/images/I/71LsC8H8oYL._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Pré-Treino C4 Original 195g - Cellucor",
-    "categoria": "suplementos",
-    "preco_original": 149.90,
-    "preco_atual": 99.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZPRET1",
-    "imagem": "https://m.media-amazon.com/images/I/71abc123pre._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Tênis Asics Gel-Nimbus 25 - Masculino",
-    "categoria": "corrida",
-    "preco_original": 899.90,
-    "preco_atual": 599.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZASC1",
-    "imagem": "https://m.media-amazon.com/images/I/71aSICSrun._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Tênis Nike React Miler 3 - Corrida Masculino",
-    "categoria": "corrida",
-    "preco_original": 599.99,
-    "preco_atual": 399.99,
-    "link": "https://www.amazon.com.br/dp/B07XYZNIKE1",
-    "imagem": "https://m.media-amazon.com/images/I/71NIKErun123._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Garrafa Térmica Squeeze 750ml - Esporte",
-    "categoria": "corrida",
-    "preco_original": 89.90,
-    "preco_atual": 49.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZSQZ1",
-    "imagem": "https://m.media-amazon.com/images/I/61squeeze123._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Smartwatch Xiaomi Band 8 - Monitor Cardíaco",
-    "categoria": "tecnologia",
-    "preco_original": 299.90,
-    "preco_atual": 189.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZXM81",
-    "imagem": "https://m.media-amazon.com/images/I/71xiaoband._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Fone Bluetooth JBL Tune 510BT - Sem Fio",
-    "categoria": "tecnologia",
-    "preco_original": 249.00,
-    "preco_atual": 149.00,
-    "link": "https://www.amazon.com.br/dp/B07XYZJBL1",
-    "imagem": "https://m.media-amazon.com/images/I/71JBLtune510._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Echo Dot 5ª Geração - Alexa - Amazon",
-    "categoria": "tecnologia",
-    "preco_original": 349.00,
-    "preco_atual": 199.00,
-    "link": "https://www.amazon.com.br/dp/B09B8V1LZ3",
-    "imagem": "https://m.media-amazon.com/images/I/71xEqBSL5HL._AC_SL1000_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Kindle 11ª Geração - 16GB - Luz Embutida",
-    "categoria": "tecnologia",
-    "preco_original": 499.00,
-    "preco_atual": 349.00,
-    "link": "https://www.amazon.com.br/dp/B09SWS1R63",
-    "imagem": "https://m.media-amazon.com/images/I/61CGGJ3bHAL._AC_SL1000_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Carregador Sem Fio 15W MagSafe - Anker",
-    "categoria": "gadgets",
-    "preco_original": 199.90,
-    "preco_atual": 119.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZANK1",
-    "imagem": "https://m.media-amazon.com/images/I/61ANKERwireless._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Mini Câmera de Segurança Wi-Fi 1080p - TP-Link",
-    "categoria": "gadgets",
-    "preco_original": 279.90,
-    "preco_atual": 169.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZTPL1",
-    "imagem": "https://m.media-amazon.com/images/I/71TPLINKcam._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Luminária LED de Mesa USB - Dobrável",
-    "categoria": "gadgets",
-    "preco_original": 79.90,
-    "preco_atual": 39.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZLED1",
-    "imagem": "https://m.media-amazon.com/images/I/61LEDdesk123._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Halteres Emborrachados Par 5kg - Acte Sports",
-    "categoria": "fitness",
-    "preco_original": 149.90,
-    "preco_atual": 89.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZHAL1",
-    "imagem": "https://m.media-amazon.com/images/I/71halterACTE._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Corda de Pular Speed Jump Rope - Training",
-    "categoria": "fitness",
-    "preco_original": 69.90,
-    "preco_atual": 34.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZCORD1",
-    "imagem": "https://m.media-amazon.com/images/I/61corda123jump._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Tapete de Yoga Antiderrapante 6mm - Acte",
-    "categoria": "fitness",
-    "preco_original": 99.90,
-    "preco_atual": 59.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZYOG1",
-    "imagem": "https://m.media-amazon.com/images/I/71tapeteYOGA._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Elástico Faixa de Resistência Kit 5 Peças - Liveup",
-    "categoria": "fitness",
-    "preco_original": 89.90,
-    "preco_atual": 49.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZELASTIC",
-    "imagem": "https://m.media-amazon.com/images/I/61elasticoLIVEUP._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Proteína Vegana Pea Protein 900g - Puro Poder",
-    "categoria": "suplementos",
-    "preco_original": 109.90,
-    "preco_atual": 74.90,
-    "link": "https://www.amazon.com.br/dp/B07XYZPEA1",
-    "imagem": "https://m.media-amazon.com/images/I/71PEAprot123._AC_SL1500_.jpg",
-    "ativo": true
-  },
-  {
-    "nome": "Monitor de Frequência Cardíaca Polar H10",
-    "categoria": "corrida",
-    "preco_original": 499.00,
-    "preco_atual": 329.00,
-    "link": "https://www.amazon.com.br/dp/B07XYZPOL1",
-    "imagem": "https://m.media-amazon.com/images/I/71POLARh10._AC_SL1500_.jpg",
-    "ativo": true
+    "id": 2,
+    "nome": "Apple iPhone 15 (128 GB) - Preto",
+    "categoria": "Tecnologia",
+    "preco_de": 7299.00,
+    "preco_por": 4699.00,
+    "url_base": "https://www.amazon.com.br/dp/B0CHX2F5QT",
+    "imagem": "https://m.media-amazon.com/images/I/416PG9Mf9sL._AC_SL1000_.jpg",
+    "enviado": false
   }
 ]
