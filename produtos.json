@@ -1,16 +1,9 @@
 [
   {
-    "titulo": "Creatina Integralmédica 300g",
+    "titulo": "Creatina Max Titanium 300g",
     "preco_normal": 119.90,
-    "preco_promocao": 89.90,
-    "link": "https://www.amazon.com.br/dp/B08TESTE/?tag=moisescarv07-20",
-    "categoria": "Suplementos"
-  },
-
-  {
-    "titulo": "Whey Protein Concentrado",
-    "preco_normal": 199.90,
-    "preco_promocao": 149.90,
+    "preco_promocao": 79.90,
+    "imagem": "https://i.imgur.com/GQvP6EY.jpeg",
     "link": "https://www.amazon.com.br/dp/B08TESTE/?tag=moisescarv07-20",
     "categoria": "Suplementos"
   },
@@ -19,6 +12,7 @@
     "titulo": "Smartwatch Esportivo",
     "preco_normal": 299.90,
     "preco_promocao": 189.90,
+    "imagem": "https://i.imgur.com/yXOvdOS.jpeg",
     "link": "https://www.amazon.com.br/dp/B08TESTE/?tag=moisescarv07-20",
     "categoria": "Tecnologia"
   }
