@@ -6,8 +6,8 @@ import requests
 from telegram import Bot
 
 # Configurações via Variáveis de Ambiente (GitHub Secrets)
-TOKEN = os.getenv('8780348557:AAFmjkBMxTYv8YnyUCkAyHQ8IbosVEPKPJo')
-CHAT_ID = os.getenv('-1003922054940')
+TOKEN = os.getenv("8780348557:AAFmjkBMxTYv8YnyUCkAyHQ8IbosVEPKPJo")
+CHAT_ID = os.getenv("-1003922054940")
 AMAZON_TAG = "moisescarv07-20"
 
 def carregar_produtos():
